@@ -13,7 +13,7 @@ pip install nltk
 ## Usage of Work Token
 #### Disadvantage of using ```in``` with String:
 Using ```in``` Operator for understanding commands is erroneous. Since, ```in``` doesn't perform a thorough Check.
-Below Code Evaluates to True and will Execute Chrome, even though the String doesn't make any Sense. Because ```varun``` have the substring ```run```.
+Below Code Evaluates to True and will Execute Chrome, even though the String doesn't make any Sense. Because ```varun``` have the substring ```run``` it will be Evaluated as Valid.
 ```python
 string = "Varun Chrome"
 print('run' in string.lower()) # True
