@@ -5,9 +5,13 @@ This is a Python Program for executing certain Programs/Application as per the C
 ## Package Used
 
 NLTK Natural Language Toolkit for [Tokenization](https://www.nltk.org/#some-simple-things-you-can-do-with-nltk) of Words.
-
 ```cmd
 pip install nltk
+```
+
+pyttsx3 for text-to-speech
+```cmd
+pip install pyttsx3
 ```
 
 ## Usage of Work Token
