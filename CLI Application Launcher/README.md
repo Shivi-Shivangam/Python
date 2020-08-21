@@ -9,7 +9,7 @@ NLTK Natural Language Toolkit for [Tokenization](https://www.nltk.org/#some-simp
 pip install nltk
 ```
 
-pyttsx3 for text-to-speech
+pyttsx3 Library for text-to-speech
 ```cmd
 pip install pyttsx3
 ```
