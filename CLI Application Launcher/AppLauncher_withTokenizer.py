@@ -30,6 +30,7 @@ while ('exit' not in command) and ('quit' not in command) and ('stop' not in com
         # Browser
         if ('browser' in command) or ('chrome' in command) or ('edge' in command) \
                 or (('internet' in command and 'explorer' in command) or 'ie' in command):
+            # Ask for Browser Name, if ont specified in Command
             if ('chrome' not in command) and ('edge' not in command) \
                     and (('internet' not in command and 'explorer' not in command) and 'ie' not in command):
                 command = wt(input("Which Browser would you like to use?"
@@ -37,6 +38,7 @@ while ('exit' not in command) and ('quit' not in command) and ('stop' not in com
             if ('internet' in command and 'explorer' in command) or 'ie' in command:
                 system("start iexplore google.com")
             elif 'chrome' in command:
+                # Ask if the user need Incognito/Private Browsing
                 if 'incognito' not in command or 'private' not in command:
                     command = wt(input("Do you want Incognito/Private Chrome? ").lower())
                 if 'incognito' in command or 'private' in command or 'yes' in command or 'yeah' in command:
@@ -44,18 +46,21 @@ while ('exit' not in command) and ('quit' not in command) and ('stop' not in com
                 else:
                     system("start chrome google.com")
             elif 'edge' in command:
+                # Ask if the user need Incognito/Private Browsing
                 if 'incognito' not in command or 'private' not in command:
                     command = wt(input("Do you want Incognito/Private Microsoft Edge? ").lower())
                 if 'incognito' in command or 'private' in command or 'yes' in command or 'yeah' in command:
                     system("start msedge -inPrivate")
                 else:
                     system("start msedge google.com")
+            # Default
             else:
                 system("start msedge google.com")
 
         # Media Player
         elif ('player' in command) or ('windows' in command and 'media' in command and 'player' in command) \
                 or ('vlc' in command) or ('groove' in command):
+            # Ask for Media Player Name, if ont specified in Command    
             if ('windows' not in command and 'media' not in command and 'player' not in command) \
                     and ('vlc' not in command) and ('groove' not in command):
                 command = wt(input("Which Media Player would you like to use?"
@@ -64,6 +69,7 @@ while ('exit' not in command) and ('quit' not in command) and ('stop' not in com
                 system("start vlc")
             elif 'groove' in command:
                 system("start mswindowsmusic:")
+            # Default
             else:
                 system("start wmplayer")
 
@@ -71,6 +77,7 @@ while ('exit' not in command) and ('quit' not in command) and ('stop' not in com
         elif ('text' in command and 'editor' in command) or ('word' in command and 'processor' in command)\
                 or ('microsoft' in command and 'word' in command) or ('word' in command) \
                 or ('notepad' in command) or ('onenote' in command) or ('sublime' in command):
+            # Ask for Text Editors Name, if ont specified in Command    
             if ('microsoft' not in command and 'word' not in command) and ('word' not in command) \
                     and ('notepad' not in command) and ('onenote' not in command) and ('sublime' not in command):
                 command = wt(input("Which Text Editor would you like to use?"
@@ -81,11 +88,13 @@ while ('exit' not in command) and ('quit' not in command) and ('stop' not in com
                 system("start onenote")
             elif 'sublime' in command:
                 system("start sublime_text")
+            # Default
             else:
                 system("start notepad")
 
         # Antivirus
         elif ('antivirus' in command) or ('windows' in command and 'defender' in command) or ('bitdefender' in command):
+            # Ask for Antivirus Name, if ont specified in Command
             if ('windows' not in command and 'defender' not in command) and ('bitdefender' not in command):
                 command = wt(input("Which Antivirus would you like to use?"
                                    "(Press Enter for Default: Windows Defender): ").lower())
